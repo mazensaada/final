@@ -1,0 +1,118 @@
+a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+   /* mainnav STYLING STARTS */
+.mainnav {
+    padding-right: 70px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+   }
+   /* mainnav MENU */
+   .menu {
+    display: flex;
+    gap: 3em;
+    
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: rgb(255, 77, 0);
+    border-radius: 5px;
+    
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+    
+   }
+   /* DROPDOWN1 MENU */
+   .services {
+    position: relative; 
+   }
+   .dropdown1 {
+    left: -20px;
+    background-color: #333;
+    padding: 1em 0 ;
+   
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown1 li + li {
+    margin-top: 10px;
+   }
+   .dropdown1 li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown1 li:hover {
+    background-color: rgb(255, 77, 0);
+   }
+   .services:hover .dropdown1 {
+    display: block;
+   }
+   /*RESPONSIVE mainnav MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    background-color: rgb(255, 77, 0);
+   }
+   /* APPLYING MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:#333;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    background-color:rgb(255, 77, 0);
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+    background-color:#333;
+    color: white;
+   }
+   .dropdown1 {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+   }
+   .dropdown1 li:hover {
+    background-color: rgb(255, 77, 0);
+   }
+   }
